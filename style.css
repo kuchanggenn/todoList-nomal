@@ -1,0 +1,55 @@
+body{
+    margin:0;
+    background-image: url("/images/background.jpg"); /*여기까지하고 서버실행하면 한개의 이미지가 여러개로 나온다... */
+    background-repeat: no-repeat; /*여기까지하면 서버실행하면 딱 한개의 이미지가 들어오지만 여백이 있다... */
+    background-size: cover; /*여기까지하면 서버실행하면 딱 한개의 이미지가 들어오고 여백도 없어진다. */
+}
+
+
+.container{
+    background-color: white;
+    min-height: 100vh; /* 100vh : view -> v보는 만큼의 hite -> h높이  */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.task-area{
+    border:1px solid lightgray;
+}
+
+/* 가로로 추가가 되는데 세로로 추가는 방법이다.  */
+.task-tabs {
+    display: flex;
+    border-bottom:1px solid lightgray;
+    position: relative;
+}
+/* 탭이세로로 됫지만 서로 공간을 띄우는것  */
+.task-tabs div{
+    padding: 1em;
+}
+
+#under-line{
+    height: 4px;
+    background-color: pink;
+    position: absolute;
+    width:60px;
+    left:0px;
+    top:52px;
+    padding: 0px;
+}
+
+.task{
+    display: flex;
+    /* 버튼 check버튼, Delete버튼 오른쪽으로 뛰워넣기  */
+    justify-content: space-between;
+    padding: 1px;
+}
+
+/* isComplete가 true이면 글에 밑줄치기  */
+.task-done {
+    text-decoration: line-through;
+}
+
+/* 마우스cursor를 탭에 갖다되면 I모양이 아닌 다른 모양으로  */
+.task-tabs div{
+    cursor:pointer;
+}
